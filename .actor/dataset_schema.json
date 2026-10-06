@@ -1,0 +1,136 @@
+{
+  "actorSpecification": 1,
+  "title": "LinkedIn company results",
+  "description": "Raw JSON keeps every source field. Flat view shows the account columns used for CRM export.",
+  "fields": {
+    "type": "object",
+    "properties": {
+      "inputUrl": {
+        "type": "string",
+        "title": "Input company URL"
+      },
+      "name": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "Company name"
+      },
+      "website": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "Website"
+      },
+      "industry": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "Industry"
+      },
+      "company_size": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "Company size"
+      },
+      "employees_on_linkedin": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "title": "Employees on LinkedIn"
+      },
+      "headquarters": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "Headquarters"
+      },
+      "organization_type": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "Organization type"
+      },
+      "founded": {
+        "type": [
+          "integer",
+          "string",
+          "null"
+        ],
+        "title": "Founded"
+      },
+      "followers": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "title": "Followers"
+      },
+      "success": {
+        "type": "boolean",
+        "title": "Success"
+      },
+      "error": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "Error"
+      },
+      "checkedAt": {
+        "type": "string",
+        "title": "Checked at"
+      }
+    }
+  },
+  "views": {
+    "flat": {
+      "title": "Account table",
+      "transformation": {
+        "fields": [
+          "inputUrl",
+          "name",
+          "website",
+          "industry",
+          "company_size",
+          "employees_on_linkedin",
+          "headquarters",
+          "organization_type",
+          "founded",
+          "followers",
+          "success",
+          "error",
+          "checkedAt"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "inputUrl": {
+            "label": "Company URL",
+            "format": "link"
+          },
+          "website": {
+            "label": "Website",
+            "format": "link"
+          },
+          "success": {
+            "label": "Success",
+            "format": "boolean"
+          },
+          "checkedAt": {
+            "label": "Checked at",
+            "format": "date"
+          }
+        }
+      }
+    }
+  }
+}

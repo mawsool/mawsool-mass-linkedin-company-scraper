@@ -1,0 +1,30 @@
+{
+  "actorSpecification": 1,
+  "events": {
+    "company-details": {
+      "title": "Company details",
+      "description": "One LinkedIn company URL processed.",
+      "isPrimaryEvent": true,
+      "eventTieredPricingUsd": {
+        "FREE": {
+          "tieredEventPriceUsd": 0.002
+        },
+        "BRONZE": {
+          "tieredEventPriceUsd": 0.0018
+        },
+        "SILVER": {
+          "tieredEventPriceUsd": 0.0016
+        },
+        "GOLD": {
+          "tieredEventPriceUsd": 0.0013
+        },
+        "PLATINUM": {
+          "tieredEventPriceUsd": 0.0011
+        },
+        "DIAMOND": {
+          "tieredEventPriceUsd": 0.0009
+        }
+      }
+    }
+  }
+}

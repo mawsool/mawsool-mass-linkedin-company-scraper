@@ -1,0 +1,61 @@
+{
+  "title": "Mass LinkedIn Company Scraper | Bulk URLs",
+  "type": "object",
+  "schemaVersion": 1,
+  "description": "Add company URLs directly, paste CSV, or upload a CSV file.",
+  "properties": {
+    "urls": {
+      "title": "LinkedIn company URLs",
+      "type": "array",
+      "description": "Add linkedin.com/company/... URLs.",
+      "editor": "stringList",
+      "prefill": [
+        "https://www.linkedin.com/company/mawsool-%D9%85%D9%88%D8%B5%D9%88%D9%84"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "urlsCsv": {
+      "title": "Or paste CSV",
+      "type": "string",
+      "description": "A url or companyUrl column. One company URL per row is also accepted.",
+      "editor": "textarea",
+      "prefill": "url\nhttps://www.linkedin.com/company/mawsool-%D9%85%D9%88%D8%B5%D9%88%D9%84"
+    },
+    "fileUrl": {
+      "title": "Or upload a CSV file",
+      "type": "string",
+      "description": "CSV with a url, linkedinUrl, or companyUrl column.",
+      "editor": "fileupload"
+    },
+    "maxUrls": {
+      "title": "Maximum URLs",
+      "type": "integer",
+      "default": 10000,
+      "minimum": 1,
+      "maximum": 1000000,
+      "description": "Cost-control cap. Maximum 1,000,000."
+    },
+    "concurrency": {
+      "title": "Concurrent requests",
+      "type": "integer",
+      "description": "How many company URLs to look up at the same time.",
+      "default": 30,
+      "minimum": 1,
+      "maximum": 100
+    },
+    "resumeId": {
+      "title": "Resume ID (optional)",
+      "type": "string",
+      "description": "Reuse the same ID after a stopped run to skip company URLs that already completed. Lists over 20 continue even without an ID.",
+      "editor": "textfield"
+    },
+    "freshStart": {
+      "title": "Look up finished companies again",
+      "type": "boolean",
+      "description": "Turn this on to ignore saved progress and look up the whole list again.",
+      "default": false
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://apify.com/schemas/v1/actor.ide.json",
+  "actorSpecification": 1,
+  "name": "mawsool-mass-linkedin-company-scraper",
+  "title": "Mass LinkedIn Company Scraper | Bulk URLs",
+  "description": "Enrich large LinkedIn company URL files with industry, size, website, headquarters, locations, specialties, similar companies, and recent posts. Concurrent, resumable, up to 1,000,000 URLs.",
+  "seoTitle": "Mass LinkedIn Company Scraper",
+  "seoDescription": "Bulk LinkedIn company data for large URL files. Industry, size, website, locations, and posts. Resumable, up to 1,000,000 URLs, from $2 per 1,000.",
+  "categories": [
+    "LEAD_GENERATION",
+    "SOCIAL_MEDIA"
+  ],
+  "version": "1.0",
+  "buildTag": "latest",
+  "minMemoryMbytes": 512,
+  "maxMemoryMbytes": 4096,
+  "defaultRunOptions": {
+    "build": "latest",
+    "timeoutSecs": 0,
+    "memoryMbytes": 1024
+  },
+  "environmentVariables": {
+    "ACTOR_MODE": "mass",
+    "CHARGE_EVENT": "company-details",
+    "COMPANY_API_KEY": "@mawsoolCompanyApiKey"
+  },
+  "meta": {
+    "templateId": "ts-empty",
+    "generatedBy": "Cursor Agent"
+  },
+  "input": "./input_schema.json",
+  "output": "./output_schema.json",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  },
+  "pricing": "./pay_per_event.json",
+  "dockerfile": "../Dockerfile"
+}
